@@ -18,6 +18,8 @@ class Player extends Sprite{
 
         if(pos.x < 0 + size.x/2) pos.x = size.x/2;
         if(pos.x > width - size.x/2) pos.x = width - size.x/2;
+        if(pos.y < 0 + size.x/2) pos.y = size.x/2;
+        if(pos.y > height - size.x/2) pos.y = height - size.x/2;
 
         vel.mult(0.9);
 
