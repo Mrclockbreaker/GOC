@@ -1,4 +1,4 @@
-class invader extends Sprite{
+class Invader extends Sprite{
     Invader(int x, int y){
         super(x, y, 40, 40);
         vel = new PVector(5, 0);
