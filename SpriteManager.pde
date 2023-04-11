@@ -40,10 +40,10 @@ class SpriteManager{
         for(int i = 0; i < active.size(); i++){
             for(int j = i + 1; j < active.size(); j++){
                 Sprite a = active.get(i);
-                Sprite b = active.get(i);
+                Sprite b = active.get(j);
                 if(a.team != b.team && collision(a, b)){
                     active.get(i).handleCollision();
-                    active.get(i).handleCollision();
+                    active.get(j).handleCollision();
                 }
             }
         }

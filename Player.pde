@@ -15,7 +15,23 @@ class Player extends Sprite{
         if(up) vel.add(new PVector(0, -speed));
         if(down) vel.add(new PVector(0, speed));
         pos.add(vel);
+
+        if(pos.x < 0 + size.x/2) pos.x = size.x/2;
+        if(pos.x > width - size.x/2) pos.x = width - size.x/2;
+
         vel.mult(0.9);
+
+
+    }
+
+    @Override
+    void display(){
+        fill(200, 0, 200);
+        ellipse(pos.x, pos.y, size.x, size.y);
+    }
+
+    @Override
+    void handleCollision(){
 
     }
 
