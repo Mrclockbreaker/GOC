@@ -1,10 +1,23 @@
+SpriteManager _SM;
+
 // Runs one time at the beginning
 void setup(){
    size(800, 600); // window size 800x600
+   _SM = new SpriteManager();
+   _SM.spawn(new Invader(250, 50)); 
 }
 
 // always runs, at the speed of the frame rate
 void draw(){
-   // a circle that follows the mouse 50x50, WxH
-   ellipse(mousex, mouseY, 50, 50);
+   background(225);
+   _SM.manage();
 }
+
+void keyPressed(){
+   _SM.player.keyDown();
+}
+
+void keyReleased(){
+   _SM.player.keyUp(); 
+}
+
