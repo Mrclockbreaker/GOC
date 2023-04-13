@@ -1,0 +1,3 @@
+class Invader extends Sprite{
+    
+}
