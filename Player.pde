@@ -60,7 +60,15 @@ class Player extends Sprite{
             case 'D': right = true; break;
             case 'w':
             case 'W': up = true; break;
+            case ' ':
+            case 'k': fire(); break;
 
         }
+    }
+    
+
+    void fire(){
+        PVector aim = new PVector(0, -10);
+        _SM.spawn(new Bullet(pos, aim, team));
     }
 }
